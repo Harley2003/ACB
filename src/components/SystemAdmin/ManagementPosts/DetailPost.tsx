@@ -10,9 +10,10 @@ interface RichTextEditorProps {
     value: string
     onChange: (value: string) => void
     disabled?: boolean
+    readOnly?: boolean
 }
 
-export function RichTextEditor({value, onChange, disabled = false}: RichTextEditorProps) {
+export function RichTextEditor({value, onChange, disabled = false, readOnly = false}: RichTextEditorProps) {
     return (
         <div className="border rounded-md">
             <div className="flex items-center gap-0.5 border-b p-2">
@@ -41,8 +42,9 @@ export function RichTextEditor({value, onChange, disabled = false}: RichTextEdit
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
                 className="border-0 rounded-none min-h-[200px]"
-                placeholder="Nhập nội dung..."
+                // placeholder="Nhập nội dung..."
                 disabled={disabled}
+                readOnly={readOnly}
             />
         </div>
     )

@@ -45,7 +45,7 @@ export function SeminarTable({seminars, startIndex}: SeminarTableProps) {
                     {seminars.map((seminar, index) => (
                         <TableRow key={seminar.id}>
                             <TableCell>{startIndex + index + 1}</TableCell>
-                            <TableCell>{seminar.title}</TableCell>
+                            <TableCell className="table-cell-ellipsis">{seminar.title}</TableCell>
                             <TableCell>{seminar.school}</TableCell>
                             <TableCell>{seminar.url}</TableCell>
                             <TableCell>{seminar.date}</TableCell>

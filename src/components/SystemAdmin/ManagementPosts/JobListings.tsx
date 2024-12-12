@@ -46,7 +46,7 @@ export function JobListings({jobs, startIndex}: JobListingsProps) {
                     {jobs.map((job, index) => (
                         <TableRow key={job.id}>
                             <TableCell>{startIndex + index + 1}</TableCell>
-                            <TableCell>{job.title}</TableCell>
+                            <TableCell className="table-cell-ellipsis">{job.title}</TableCell>
                             <TableCell>{job.company}</TableCell>
                             <TableCell>{job.email}</TableCell>
                             <TableCell>{job.date}</TableCell>

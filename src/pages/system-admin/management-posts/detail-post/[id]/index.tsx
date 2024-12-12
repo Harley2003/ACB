@@ -34,12 +34,16 @@ export default function JobDetailsPage() {
                                 <div className="grid gap-6">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Tiêu đề</label>
+                                            <label className="font-medium">Tiêu đề
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="Support Sales (Part Time - Tiếng Nhật)"
                                                    className="bg-gray-100" readOnly disabled={true}/>
                                         </div>
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Doanh nghiệp</label>
+                                            <label className="font-medium">Doanh nghiệp
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="Công ty Cổ phần JVB Việt Nam" className="bg-gray-100"
                                                    readOnly disabled={true}/>
                                         </div>
@@ -47,12 +51,16 @@ export default function JobDetailsPage() {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Số lượng tuyển</label>
+                                            <label className="font-medium">Số lượng tuyển
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="2" type="number" className="bg-gray-100" readOnly
                                                    disabled={true}/>
                                         </div>
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Lĩnh vực</label>
+                                            <label className="font-medium">Lĩnh vực
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="Sales" className="bg-gray-100" readOnly
                                                    disabled={true}/>
                                         </div>
@@ -60,7 +68,9 @@ export default function JobDetailsPage() {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Mô tả</label>
+                                            <label className="font-medium">Mô tả
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <RichTextEditor
                                                 value={description}
                                                 onChange={setDescription}
@@ -71,12 +81,16 @@ export default function JobDetailsPage() {
                                         <div className="grid md:grid-rows-3 gap-6">
                                             <div className="grid md:grid-cols-2 gap-3">
                                                 <div className="grid gap-x-10">
-                                                    <label className="font-medium">Lương (từ)</label>
+                                                    <label className="font-medium">Lương (từ)
+                                                        <span className="text-red-500 ml-1">*</span>
+                                                    </label>
                                                     <Input defaultValue="0" type="number" className="bg-gray-100"
                                                            readOnly disabled={true}/>
                                                 </div>
                                                 <div className="grid gap-2">
-                                                    <label className="font-medium">Lương (đến)</label>
+                                                    <label className="font-medium">Lương (đến)
+                                                        <span className="text-red-500 ml-1">*</span>
+                                                    </label>
                                                     <Input defaultValue="5000000" type="number" className="bg-gray-100"
                                                            readOnly disabled={true}/>
                                                 </div>
@@ -84,19 +98,27 @@ export default function JobDetailsPage() {
 
                                             <div className="grid md:grid-cols-2 gap-3">
                                                 <div className="grid gap-2">
-                                                    <label className="font-medium">Thời gian làm việc (từ)</label>
-                                                    <Input defaultValue="05/11/2024" type="text" className="bg-gray-100"
+                                                    <label className="font-medium">Thời gian làm việc (bắt đầu)
+                                                        <span className="text-red-500 ml-1">*</span>
+                                                    </label>
+                                                    <Input defaultValue="Từ T2-T6, 8h-17h15" type="text"
+                                                           className="bg-gray-100"
                                                            readOnly disabled={true}/>
                                                 </div>
                                                 <div className="grid gap-2">
-                                                    <label className="font-medium">Thời gian làm việc (đến)</label>
-                                                    <Input defaultValue="19/11/2024" type="text" className="bg-gray-100"
+                                                    <label className="font-medium">Loại thời gian làm việc
+                                                        <span className="text-red-500 ml-1">*</span>
+                                                    </label>
+                                                    <Input defaultValue="Toàn thời gian" type="text"
+                                                           className="bg-gray-100"
                                                            readOnly disabled={true}/>
                                                 </div>
                                             </div>
 
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Giới tính</label>
+                                                <label className="font-medium">Giới tính
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <RadioGroup defaultValue="both" className="flex gap-4"
                                                             disabled={true}>
                                                     <div className="flex items-center space-x-2">
@@ -124,12 +146,16 @@ export default function JobDetailsPage() {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Phúc lợi</label>
+                                            <label className="font-medium">Phúc lợi
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <RichTextEditor value={benefits} onChange={setBenefits} disabled={true}/>
                                         </div>
 
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Yêu cầu</label>
+                                            <label className="font-medium">Yêu cầu
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <RichTextEditor value={requirements} onChange={setRequirements}
                                                             disabled={true}/>
                                         </div>
@@ -137,12 +163,16 @@ export default function JobDetailsPage() {
 
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Tỉnh/thành phố</label>
+                                            <label className="font-medium">Tỉnh/thành phố
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="Hà Nội" className="bg-gray-100" readOnly
                                                    disabled={true}/>
                                         </div>
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Quận/huyện</label>
+                                            <label className="font-medium">Quận/huyện
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="Nam Từ Liêm" className="bg-gray-100" readOnly
                                                    disabled={true}/>
                                         </div>

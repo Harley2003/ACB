@@ -39,15 +39,21 @@ export default function AccountDetailsPage() {
                                         <h2 className="text-xl font-semibold mb-4">Thông tin tài khoản</h2>
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Tên tài khoản</label>
+                                                <label className="font-medium">Tên tài khoản
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Input value="Nguyễn Văn Tài" className="bg-gray-100" readOnly/>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Email</label>
+                                                <label className="font-medium">Email
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Input value="example1@gmail.com" className="bg-gray-100" readOnly/>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Mật khẩu</label>
+                                                <label className="font-medium">Mật khẩu
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <div className="relative">
                                                     <Input
                                                         type={showPassword ? "text" : "password"}
@@ -66,14 +72,18 @@ export default function AccountDetailsPage() {
                                                 </div>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Số điện thoại</label>
+                                                <label className="font-medium">Số điện thoại
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Input value="012345678" className="bg-gray-100" readOnly/>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="grid gap-2">
-                                        <label className="font-medium">Tổ chức</label>
+                                        <label className="font-medium">Tổ chức
+                                            <span className="text-red-500 ml-1">*</span>
+                                        </label>
                                         <Select defaultValue="business" disabled>
                                             <SelectTrigger className="bg-gray-100">
                                                 <SelectValue>Doanh nghiệp</SelectValue>
@@ -90,7 +100,9 @@ export default function AccountDetailsPage() {
                                         <h2 className="text-xl font-semibold mb-4">Thông tin địa chỉ</h2>
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Tỉnh/Thành phố</label>
+                                                <label className="font-medium">Tỉnh/Thành phố
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Select defaultValue="hanoi" disabled>
                                                     <SelectTrigger className="bg-gray-100">
                                                         <SelectValue>Hà Nội</SelectValue>
@@ -103,7 +115,9 @@ export default function AccountDetailsPage() {
                                                 </Select>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Quận/Huyện</label>
+                                                <label className="font-medium">Quận/Huyện
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Select defaultValue="namtuliem" disabled>
                                                     <SelectTrigger className="bg-gray-100">
                                                         <SelectValue>Nam Từ Liêm</SelectValue>

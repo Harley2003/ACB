@@ -31,13 +31,17 @@ export default function WorkshopDetailsPage() {
                                     <div className="grid md:grid-cols-2 gap-6">
 
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Tiêu đề</label>
+                                            <label className="font-medium">Tiêu đề
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="Hội thảo IT" className="bg-gray-100" readOnly
                                                    disabled={true}/>
                                         </div>
 
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Trường đại học</label>
+                                            <label className="font-medium">Trường đại học
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
                                             <Input defaultValue="Trường đại học bách khoa Hà Nội"
                                                    className="bg-gray-100"
                                                    readOnly disabled={true}/>
@@ -48,26 +52,32 @@ export default function WorkshopDetailsPage() {
                                     <div className="grid md:grid-cols-2 gap-6">
 
                                         <div className="grid gap-2">
-                                            <label className="font-medium">Mô tả</label>
-                                            <RichTextEditor value={description} onChange={setDescription}/>
+                                            <label className="font-medium">Mô tả
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
+                                            <RichTextEditor value={description} onChange={setDescription} disabled={true}/>
                                         </div>
 
                                         <div className="grid md:grid-rows-3 gap-6">
                                             <div className="grid md:grid-cols-2 gap-3">
                                                 <div className="grid gap-2">
-                                                    <label className="font-medium">Ngày bắt đầu</label>
+                                                    <label className="font-medium">Ngày bắt đầu
+                                                        <span className="text-red-500 ml-1">*</span>
+                                                    </label>
                                                     <div className="relative">
                                                         <Input defaultValue="29/11/2024" className="bg-gray-100"
-                                                               readOnly/>
+                                                               readOnly disabled={true}/>
                                                         <Calendar
                                                             className="absolute right-3 top-2.5 h-5 w-5 text-gray-500"/>
                                                     </div>
                                                 </div>
                                                 <div className="grid gap-2">
-                                                    <label className="font-medium">Ngày kết thúc</label>
+                                                    <label className="font-medium">Ngày kết thúc
+                                                        <span className="text-red-500 ml-1">*</span>
+                                                    </label>
                                                     <div className="relative">
                                                         <Input defaultValue="30/11/2024" className="bg-gray-100"
-                                                               readOnly/>
+                                                               readOnly disabled={true}/>
                                                         <Calendar
                                                             className="absolute right-3 top-2.5 h-5 w-5 text-gray-500"/>
                                                     </div>
@@ -75,9 +85,11 @@ export default function WorkshopDetailsPage() {
                                             </div>
 
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Số lượng tối đa</label>
+                                                <label className="font-medium">Số lượng tối đa
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Input defaultValue="30" type="number" className="bg-gray-100"
-                                                       readOnly/>
+                                                       readOnly disabled={true}/>
                                             </div>
 
                                         </div>

@@ -20,10 +20,10 @@ import Heading from "@/src/components/Common/Heading";
 import {exportToExcel} from "@/src/components/SystemAdmin/Common/ExportExcel";
 import {Download} from "lucide-react";
 
-// Sample data
+// Generate data
 const seminarListings = Array.from({length: 100}, (_, i) => ({
     id: i + 1,
-    title: "Tuyển thực tập frontend developer",
+    title: "Hội thảo " + (i + 1),
     school: "Công ty JVB Việt Nam",
     email: "company@jvb-corp.com",
     date: "20/8/2024",
@@ -76,7 +76,7 @@ export default function Page() {
                             <h1 className="text-2xl font-bold mb-6">DANH SÁCH HỘI THẢO</h1>
 
                             <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
-                                <div className="w-full md:w-1/3 bg-[#fff]">
+                                <div className="w-full md:w-[40%] bg-[#fff]">
                                     <Input
                                         placeholder="Tìm kiếm tiêu đề, trường đại học"
                                         className="w-full"
@@ -84,7 +84,7 @@ export default function Page() {
                                         onChange={(e) => setSearchTerm(e.target.value)}
                                     />
                                 </div>
-                                <div className="w-full md:w-1/3 bg-[#fff]">
+                                <div className="w-full md:w-[25%] bg-[#fff]">
                                     <Select value={selectedStatus} onValueChange={setSelectedStatus}>
                                         <SelectTrigger className="w-full bg-[#fff]">
                                             <SelectValue placeholder="Trạng thái"/>
@@ -99,11 +99,11 @@ export default function Page() {
                                 </div>
 
 
-                                <div className="w-full md:w-1/6">
+                                <div className="w-full md:w-[20%]">
                                     <button
                                         onClick={() => {
-                                            if (Array.isArray(seminarListings) && seminarListings.length > 0) {
-                                                exportToExcel({data: seminarListings});
+                                            if (Array.isArray(filteredSeminars) && filteredSeminars.length > 0) {
+                                                exportToExcel({data: filteredSeminars});
                                             }
                                         }}
                                         className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded flex items-center gap-2"

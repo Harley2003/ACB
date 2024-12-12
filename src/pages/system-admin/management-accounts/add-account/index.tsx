@@ -39,15 +39,21 @@ export default function CreateAccountPage() {
                                         <h2 className="text-xl font-semibold mb-4">Thông tin tài khoản</h2>
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Tên tài khoản</label>
+                                                <label className="font-medium">Tên tài khoản
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Input placeholder="Nhập tên tài khoản"/>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Email</label>
+                                                <label className="font-medium">Email
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Input placeholder="Nhập email" type="email"/>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Mật khẩu</label>
+                                                <label className="font-medium">Mật khẩu
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <div className="relative">
                                                     <Input
                                                         type={showPassword ? "text" : "password"}
@@ -64,31 +70,40 @@ export default function CreateAccountPage() {
                                                 </div>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Số điện thoại</label>
+                                                <label className="font-medium">Số điện thoại
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Input placeholder="Nhập số điện thoại" type="tel"/>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="grid gap-2">
-                                        <label className="font-medium">Tổ chức</label>
-                                        <Select>
-                                            <SelectTrigger>
-                                                <SelectValue placeholder="Doanh nghiệp"/>
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectItem value="business">Doanh nghiệp</SelectItem>
-                                                <SelectItem value="school">Trường học</SelectItem>
-                                                <SelectItem value="other">Khác</SelectItem>
-                                            </SelectContent>
-                                        </Select>
+                                    <div className="grid md:grid-cols-2 gap-6">
+                                        <div className="grid gap-2">
+                                            <label className="font-medium">Tổ chức
+                                                <span className="text-red-500 ml-1">*</span>
+                                            </label>
+                                            <Select>
+                                                <SelectTrigger>
+                                                    <SelectValue placeholder="Chọn tổ chức"/>
+                                                </SelectTrigger>
+                                                <SelectContent>
+                                                    <SelectItem value="other">Quản trị viên phụ</SelectItem>
+                                                    <SelectItem value="business">Doanh nghiệp</SelectItem>
+                                                    <SelectItem value="school">Trường học</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                        </div>
                                     </div>
+
 
                                     <div>
                                         <h2 className="text-xl font-semibold mb-4">Thông tin địa chỉ</h2>
                                         <div className="grid md:grid-cols-2 gap-6">
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Tỉnh/Thành phố</label>
+                                                <label className="font-medium">Tỉnh/Thành phố
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Select>
                                                     <SelectTrigger>
                                                         <SelectValue placeholder="Chọn tỉnh/thành phố"/>
@@ -101,7 +116,9 @@ export default function CreateAccountPage() {
                                                 </Select>
                                             </div>
                                             <div className="grid gap-2">
-                                                <label className="font-medium">Quận/Huyện</label>
+                                                <label className="font-medium">Quận/Huyện
+                                                    <span className="text-red-500 ml-1">*</span>
+                                                </label>
                                                 <Select>
                                                     <SelectTrigger>
                                                         <SelectValue placeholder="Chọn quận/huyện"/>
@@ -119,8 +136,8 @@ export default function CreateAccountPage() {
 
                                 <div className="flex items-center justify-end gap-4 mt-8">
                                     <Button variant="outline">Quay lại</Button>
-                                    <Button className="bg-green-500 hover:bg-green-600 text-white">Lưu thông
-                                        tin</Button>
+                                    <Button className="bg-green-500 hover:bg-green-600 text-white">Lưu tài khoản
+                                    </Button>
                                 </div>
                             </div>
                         </div>

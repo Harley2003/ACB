@@ -83,6 +83,7 @@ export default function Page() {
                     <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100">
                         <div className="container mx-auto px-6 py-8">
                             <h1 className="text-2xl font-bold mb-6">DANH SÁCH BÀI ĐĂNG VIỆC LÀM</h1>
+
                             <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
                                 <div className="w-full md:w-[40%] bg-[#fff]">
                                     <Input
@@ -121,8 +122,8 @@ export default function Page() {
                                 <div className="w-full md:w-[20%]">
                                     <button
                                         onClick={() => {
-                                            if (Array.isArray(jobListings) && jobListings.length > 0) {
-                                                exportToExcel({data: jobListings});
+                                            if (Array.isArray(filteredJobs) && filteredJobs.length > 0) {
+                                                exportToExcel({data: filteredJobs});
                                             }
                                         }}
                                         className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded flex items-center gap-2"

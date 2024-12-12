@@ -33,7 +33,7 @@ export function Header() {
                         <span className="font-semibold">Quản trị viên</span>
                         {/*<ChevronDown className="h-4 w-4 text-gray-500"/>*/}
                     </div>
-                    <span className="text-sm text-gray-500">Super Admin</span>
+                    <span className="text-sm text-gray-500">Siêu quản trị viên</span>
                 </div>
             </div>
             <div className="flex items-center gap-4">
@@ -64,8 +64,8 @@ export function Header() {
                         <AvatarFallback>AD</AvatarFallback>
                     </Avatar>
                     <div>
-                        <div className="font-medium">Admin</div>
-                        <div className="text-sm text-gray-500">Mariakfly@email.com</div>
+                        <div className="font-medium">Tên quản trị viên</div>
+                        <div className="text-sm text-gray-500">admin@email.com</div>
                     </div>
                 </div>
             </div>
